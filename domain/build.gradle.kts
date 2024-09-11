@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sngular.data"
+    namespace = "com.sngular.domain"
     compileSdk = 34
 
     defaultConfig {
@@ -33,8 +33,6 @@ android {
 }
 
 dependencies {
-
-    implementation(project(":domain"))
 
     implementation(libs.androidx.core.ktx)
 

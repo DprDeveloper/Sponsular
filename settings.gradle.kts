@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Sponsular"
 include(":app")
+include(":presentation")
+include(":data")
+include(":domain")

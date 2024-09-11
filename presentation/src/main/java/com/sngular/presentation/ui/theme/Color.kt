@@ -1,4 +1,4 @@
-package com.sngular.sponsular.ui.theme
+package com.sngular.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.android.spotless)
     alias(libs.plugins.android.detekt)
+    alias(libs.plugins.android.hilt) apply false
+    alias(libs.plugins.org.jetbrains.kotlin.kapt) apply false
 }
 
 spotless {

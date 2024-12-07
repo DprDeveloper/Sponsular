@@ -8,6 +8,8 @@ plugins {
     alias(libs.plugins.android.spotless)
     alias(libs.plugins.android.detekt)
     alias(libs.plugins.android.hilt) apply false
+    alias(libs.plugins.firebase.crashlytics) apply false
+    alias(libs.plugins.google.gms.google.services) apply false
 }
 
 spotless {

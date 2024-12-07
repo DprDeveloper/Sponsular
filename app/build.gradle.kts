@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.android.hilt)
     kotlin("kapt")
+    alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -67,6 +69,10 @@ dependencies {
     //Hilt
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+
+    //Crashlytics
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.crashlytics)
 
 
     testImplementation(libs.junit)

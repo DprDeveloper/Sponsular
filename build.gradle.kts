@@ -2,14 +2,23 @@ import com.diffplug.spotless.LineEnding.PLATFORM_NATIVE
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.jetbrains.kotlin.android) apply false
-    alias(libs.plugins.android.library) apply false
-    alias(libs.plugins.android.spotless)
-    alias(libs.plugins.android.detekt)
-    alias(libs.plugins.android.hilt) apply false
-    alias(libs.plugins.firebase.crashlytics) apply false
-    alias(libs.plugins.google.gms.google.services) apply false
+    id(Plugins.kotlinSerialization) version Versions.kotlinSerialization
+    id(Plugins.spotless) version Versions.spotless
+    id(Plugins.detekt) version Versions.detekt
+    id(Plugins.hilt) version Versions.hilt apply false
+    id(Plugins.firebaseCrashlytics) version Versions.firebaseCrashlytics apply false
+    id(Plugins.gmsGoogleService)version Versions.gmsGoogleService apply false
+}
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath(Dependencies.hiltAgp)
+    }
 }
 
 spotless {

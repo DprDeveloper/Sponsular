@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.android.hilt)
+    id(Plugins.androidApplication)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.hilt)
     kotlin("kapt")
-    alias(libs.plugins.firebase.crashlytics)
-    alias(libs.plugins.google.gms.google.services)
+    id(Plugins.firebaseCrashlytics)
+    id(Plugins.gmsGoogleService)
 }
 
 android {
@@ -54,32 +54,10 @@ android {
 }
 
 dependencies {
-
     implementation(project(":presentation"))
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-
-    //Hilt
-    implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
-
-    //Crashlytics
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.crashlytics)
-
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    core()
+    compose()
+    hilt()
+    firebase()
+    test()
 }

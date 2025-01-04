@@ -49,9 +49,6 @@ okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okht
 okhttp3-interceptor-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-android-library = { id = "com.android.library", version.ref = "agp" }
 android-spotless = { id = "com.diffplug.spotless", version.ref = "spotless"}
 android-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}

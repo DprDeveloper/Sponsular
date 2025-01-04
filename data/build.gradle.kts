@@ -2,11 +2,11 @@ import java.io.FileInputStream
 import java.util.Properties
 
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.android.hilt)
+    id(Plugins.androidLibrary)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.hilt)
     kotlin("kapt")
-    alias(libs.plugins.kotlin.serialization)
+    id(Plugins.kotlinSerialization)
 }
 
 android {
@@ -62,24 +62,9 @@ dependencies {
 
     implementation(project(":domain"))
 
-    implementation(libs.androidx.core.ktx)
-
-    //Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.json)
-
-    //okHttpClient
-    implementation(libs.okhttp3)
-    implementation(libs.okhttp3.interceptor.logging)
-
-    //Hilt
-    implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
-
-    //Json serializer
-    implementation(libs.serialization.json)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    core()
+    retrofit()
+    hilt()
+    serializer()
+    test()
 }

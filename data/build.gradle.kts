@@ -64,11 +64,9 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
 
-    //Retrofit
+    //Network
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.json)
-
-    //okHttpClient
     implementation(libs.okhttp3)
     implementation(libs.okhttp3.interceptor.logging)
 
@@ -79,6 +77,7 @@ dependencies {
     //Json serializer
     implementation(libs.serialization.json)
 
+    //testing Pruebas
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

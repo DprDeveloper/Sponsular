@@ -59,4 +59,48 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
+[bundles]
+core = [
+    "androidx-core-ktx",
+    "androidx-appcompat",
+    "material",
+    "androidx-lifecycle-runtime-ktx"
+]
 
+firebase = [
+    "firebase-bom",
+    "firebase-crashlytics"
+]
+
+testing = [
+    "junit",
+    "androidx-junit",
+    "androidx-espresso-core"
+]
+
+compose = [
+    "androidx-activity-compose",
+    "androidx-ui",
+    "androidx-ui-graphics",
+    "androidx-ui-tooling",
+    "androidx-ui-tooling-preview",
+    "androidx-ui-test-manifest",
+    "androidx-ui-test-junit4",
+    "androidx-material3"
+]
+
+networking = [
+    "retrofit",
+    "retrofit-converter-json",
+    "okhttp3",
+    "okhttp3-interceptor-logging"
+]
+
+hilt = [
+    "hilt",
+    "hilt-compiler"
+]
+
+serialization = [
+    "serialization-json"
+]

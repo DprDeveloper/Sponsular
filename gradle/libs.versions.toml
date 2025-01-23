@@ -1,4 +1,8 @@
 [versions]
+compileSdk = "34"
+minSdk = "34"
+targetSdk = "34"
+
 agp = "8.5.0"
 firebaseBom = "33.7.0"
 kotlin = "1.9.21"
@@ -47,6 +51,9 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serializationJson" }
 okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
 okhttp3-interceptor-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

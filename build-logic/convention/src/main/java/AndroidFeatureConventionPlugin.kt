@@ -16,6 +16,9 @@ class AndroidFeatureConventionPlugin: Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
+                buildFeatures {
+                    buildConfig = true
+                }
             }
 
             dependencies {

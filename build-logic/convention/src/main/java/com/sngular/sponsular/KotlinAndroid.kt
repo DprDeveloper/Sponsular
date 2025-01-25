@@ -11,7 +11,6 @@ internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
 ) {
     commonExtension.apply {
-        namespace = "com.sngular.sponsular"
         compileSdk =  libs.findVersion("compileSdk").get().toString().toInt()
 
         defaultConfig {

@@ -28,6 +28,10 @@ gradlePlugin {
             id = "sponsular.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "sponsular.android.library"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
         register("androidHilt") {
             id = "sponsular.android.hilt"
             implementationClass = "HiltConventionPlugin"
@@ -35,6 +39,10 @@ gradlePlugin {
         register("androidCrashlytics") {
             id = "sponsular.android.crashlytics"
             implementationClass = "CrashlyticsConventionPlugin"
+        }
+        register("androidCompose") {
+            id = "sponsular.android.compose"
+            implementationClass = "ComposeConventionPlugin"
         }
     }
 }

@@ -44,5 +44,13 @@ gradlePlugin {
             id = "sponsular.android.compose"
             implementationClass = "ComposeConventionPlugin"
         }
+        register("androidRetrofit") {
+            id = "sponsular.android.retrofit"
+            implementationClass = "RetrofitConventionPlugin"
+        }
+        register("androidSerialization") {
+            id = "sponsular.android.serialization"
+            implementationClass = "SerializationConventionPlugin"
+        }
     }
 }

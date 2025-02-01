@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.sngular.presentation.navigation.NavigationController
 import com.sngular.presentation.ui.theme.SponsularTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,20 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SponsularTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Column {
-                        Greeting(
-                            name = "Android",
-                            modifier = Modifier.padding(innerPadding),
-                        )
-                        Button(
-                            onClick = { throw RuntimeException("Test Crash") }
-                        ) {
-                            Text("Genera error")
-                        }
-                    }
-
-                }
+                NavigationController()
             }
         }
     }

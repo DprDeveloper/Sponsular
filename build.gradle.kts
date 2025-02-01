@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.android.hilt) apply false
     alias(libs.plugins.firebase.crashlytics) apply false
     alias(libs.plugins.google.gms.google.services) apply false
+    alias(libs.plugins.compose.compiler) apply false
 }
 
 spotless {

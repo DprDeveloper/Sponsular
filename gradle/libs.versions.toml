@@ -6,7 +6,7 @@ kotlinCompilerExtension = "1.5.7"
 
 agp = "8.5.0"
 firebaseBom = "33.7.0"
-kotlin = "1.9.21"
+kotlin = "2.0.20"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -21,10 +21,12 @@ detekt = "1.23.7"
 retrofit = "2.11.0"
 retrofitConverterJson = "2.11.0"
 hilt = "2.50"
-serializationJson = "1.6.3"
+serializationJson = "1.7.3"
 okhttp3 = "4.12.0"
 firebaseCrashlytics = "3.0.2"
 googleGmsGoogleServices = "4.4.2"
+navigationCompose = "2.8.4"
+serializationPlugin = "2.0.21"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -52,6 +54,7 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serializationJson" }
 okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
 okhttp3-interceptor-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose"}
 
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -63,52 +66,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 android-spotless = { id = "com.diffplug.spotless", version.ref = "spotless"}
 android-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serializationPlugin" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
-
-[bundles]
-core = [
-    "androidx-core-ktx",
-    "androidx-appcompat",
-    "material",
-    "androidx-lifecycle-runtime-ktx"
-]
-
-firebase = [
-    "firebase-bom",
-    "firebase-crashlytics"
-]
-
-testing = [
-    "junit",
-    "androidx-junit",
-    "androidx-espresso-core"
-]
-
-compose = [
-    "androidx-activity-compose",
-    "androidx-ui",
-    "androidx-ui-graphics",
-    "androidx-ui-tooling",
-    "androidx-ui-tooling-preview",
-    "androidx-ui-test-manifest",
-    "androidx-ui-test-junit4",
-    "androidx-material3"
-]
-
-networking = [
-    "retrofit",
-    "retrofit-converter-json",
-    "okhttp3",
-    "okhttp3-interceptor-logging"
-]
-
-hilt = [
-    "hilt",
-    "hilt-compiler"
-]
-
-serialization = [
-    "serialization-json"
-]
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

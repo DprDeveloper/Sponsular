@@ -1,5 +1,6 @@
 plugins {
     id("sponsular.android.library")
+    id("sponsular.android.serialization")
     id("sponsular.android.compose")
 }
 
